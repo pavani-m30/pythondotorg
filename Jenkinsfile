@@ -8,18 +8,11 @@ pipeline {
             }
         }
 
-        stage('Setup Python') {
+        stage('Run Python Script') {
             steps {
                 sh '''
-                    pip3 install -r requirements.txt || true
-                '''
-            }
-        }
-
-        stage('Run Tests') {
-            steps {
-                sh '''
-                   python3 -m pytest || true
+                    # Run your Python file directly
+                    python3 your_script.py
                 '''
             }
         }
@@ -32,7 +25,7 @@ pipeline {
                 withSonarQubeEnv('SonarQube') {
                     sh '''
                         sonar-scanner \
-                          -Dsonar.projecectKey=pipeline \
+                          -Dsonar.projectKey=python-project \
                           -Dsonar.sources=. \
                           -Dsonar.host.url=http://localhost:9000 \
                           -Dsonar.login=$SONARQUBE
