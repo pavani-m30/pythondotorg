@@ -11,9 +11,7 @@ pipeline {
         stage('Setup Python') {
             steps {
                 sh '''
-                    python3 -m venv venv
-                    . venv/bin/activate
-                    pip install -r requirements.txt || true
+                    pip3 install -r requirements.txt || true
                 '''
             }
         }
@@ -21,7 +19,6 @@ pipeline {
         stage('Run Tests') {
             steps {
                 sh '''
-                    . venv/bin/activate
                     pytest || true
                 '''
             }
@@ -35,7 +32,7 @@ pipeline {
                 withSonarQubeEnv('SonarQube') {
                     sh '''
                         sonar-scanner \
-                          -Dsonar.projectKey=pipeline \
+                          -Dsonar.projecectKey=pipeline \
                           -Dsonar.sources=. \
                           -Dsonar.host.url=http://localhost:9000 \
                           -Dsonar.login=$SONARQUBE
