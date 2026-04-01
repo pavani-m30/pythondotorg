@@ -11,8 +11,7 @@ pipeline {
         stage('Run Python Script') {
             steps {
                 sh '''
-                    # Run your Python file directly
-                    python3 your_script.py
+                    python3 main.py
                 '''
             }
         }
