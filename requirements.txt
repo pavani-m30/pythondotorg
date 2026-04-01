@@ -3,7 +3,7 @@ django-markupfield
 # Core testing framework
 pytest
 feedparser
-
+beautifulsoup4
 
 # Coverage reporting (optional, useful for SonarQube)
 coverage
