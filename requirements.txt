@@ -8,8 +8,7 @@ coverage
 flake8
 pylint
 
-# SonarQube Python plugin (optional, for local checks)
-sonar-python
+
 
 # Common libraries often used in Python projects
 requests
