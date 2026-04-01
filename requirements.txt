@@ -1,0 +1,15 @@
+# Core testing framework
+pytest
+
+# Coverage reporting (optional, useful for SonarQube)
+coverage
+
+# Linting and style checks
+flake8
+pylint
+
+# SonarQube Python plugin (optional, for local checks)
+sonar-python
+
+# Common libraries often used in Python projects
+requests
