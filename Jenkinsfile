@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/pavani-m30/<your-fork>.git'
+                git branch: 'main', url: 'https://github.com/pavani-m30/pythondotorg.git'
             }
         }
 
