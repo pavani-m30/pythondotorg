@@ -1,6 +1,9 @@
 django
+django-markupfield
 # Core testing framework
 pytest
+feedparser
+
 
 # Coverage reporting (optional, useful for SonarQube)
 coverage
